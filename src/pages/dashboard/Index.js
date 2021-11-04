@@ -16,7 +16,6 @@ const Index = () => {
         setLoading(true)
         const response = await Requests.Dashboard.Index(header)
         if (response) setData(response.data)
-        console.log(response.data);
         setLoading(false)
     }, [header])
 
