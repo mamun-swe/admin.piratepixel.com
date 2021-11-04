@@ -30,6 +30,10 @@ import UploadsIndex from '../pages/uploads/Index'
 // --- Profile ---
 import ProfileIndex from '../pages/profile/Index'
 
+// --- Tags ---
+import TagIndex from '../pages/tags/Index'
+import TagStore from '../pages/tags/Store'
+
 
 export const routes = [
     {
@@ -136,5 +140,31 @@ export const routes = [
                 component: ProfileIndex
             }
         ]
-    }
+    },
+    {
+        title: "Tags",
+        name: "tags",
+        inDrawer: true,
+        icon: <UserCheck size={18} />,
+        child: [
+            {
+                title: "All Tags",
+                name: "tags index",
+                path: "/dashboard/tags",
+                exact: true,
+                inDrawer: true,
+                icon: <List size={18} />,
+                component: TagIndex
+            },
+            {
+                title: "New Tag",
+                name: "tag store",
+                path: "/dashboard/tags/store",
+                exact: true,
+                inDrawer: true,
+                icon: <Plus size={18} />,
+                component: TagStore
+            }
+        ]
+    },
 ]

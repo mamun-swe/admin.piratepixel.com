@@ -1,30 +1,28 @@
-// import React, { useEffect, useState, useCallback } from 'react'
-import React from 'react'
-import './style.scss'
-// import { Loader } from '../../components/loader/Index'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Loader } from '../../components/loader/Index'
 import { Layout, Main } from '../../components/layout/Index'
-import { DollarSign, ShoppingBag, ShoppingCart, Users } from 'react-feather'
-// import Requests from '../../utils/Requests/Index'
+import { Container } from '../../components/container/Index'
+import { Card } from '../../components/card/Index'
+import Requests from '../../utils/Requests/Index'
 
 const Index = () => {
-    // const [data, setData] = useState([])
-    // const [loading, setLoading] = useState(false)
-    // const [header] = useState({
-    //     headers: { Authorization: "Bearer " + localStorage.getItem('token') }
-    // })
+    const [data, setData] = useState({})
+    const [loading, setLoading] = useState(false)
+    const [header] = useState({
+        headers: { Authorization: "Bearer " + localStorage.getItem('token') }
+    })
 
-    // const fetchData = useCallback(async () => {
-    //     setLoading(true)
-    //     const response = await Requests.Dashboard.Index(header)
-    //     if (response) setData(response)
-    //     setLoading(false)
-    // }, [header])
+    const fetchData = useCallback(async () => {
+        setLoading(true)
+        const response = await Requests.Dashboard.Index(header)
+        if (response) setData(response.data)
+        console.log(response.data);
+        setLoading(false)
+    }, [header])
 
-    // useEffect(() => {
-    //     fetchData(1)
-    // }, [fetchData])
-
-    // if (loading) return <Loader />
+    useEffect(() => {
+        fetchData(1)
+    }, [fetchData])
 
     return (
         <div>
@@ -35,87 +33,64 @@ const Index = () => {
             />
 
             <Main>
+                {loading && !Object.keys(data).length ? <Loader /> : null}
+
                 <div className="dashboard-container col-12 mb-4">
-                    <div className="row">
+                    <Container.Row>
+                        <Container.Column className="col-12 col-sm-6 col-md-4 mb-3">
+                            <Card.Simple>
+                                <Card.Body className="text-center py-4">
+                                    <p className="font-17 mb-0">{data.admin || 0}</p>
+                                    <p className="font-17 fw-bolder mb-0">Admin</p>
+                                </Card.Body>
+                            </Card.Simple>
+                        </Container.Column>
 
-                        {/* Earning container */}
-                        <div className="col-12 col-lg-4 col-xl-3">
-                            <div className="card border-0">
-                                <div className="card-body">
-                                    <h5>Earnings</h5>
-                                    <p>Total Earnings of the Month</p>
-                                    <h4 className="mb-0">Tk. 43,567.53</h4>
-                                </div>
-                            </div>
-                        </div>
+                        <Container.Column className="col-12 col-sm-6 col-md-4 mb-3">
+                            <Card.Simple>
+                                <Card.Body className="text-center py-4">
+                                    <p className="font-17 mb-0">{data.users || 0}</p>
+                                    <p className="font-17 fw-bolder mb-0">Users</p>
+                                </Card.Body>
+                            </Card.Simple>
+                        </Container.Column>
 
-                        {/* Overview container */}
-                        <div className="col-12 col-lg-8 col-xl-9">
-                            <div className="card border-0">
-                                <div className="card-body">
-                                    <h5>Overview</h5>
-                                    <p className="mb-4">All Earning Overview</p>
+                        <Container.Column className="col-12 col-sm-6 col-md-4 mb-3">
+                            <Card.Simple>
+                                <Card.Body className="text-center py-4">
+                                    <p className="font-17 mb-0">{data.images || 0}</p>
+                                    <p className="font-17 fw-bolder mb-0">Images</p>
+                                </Card.Body>
+                            </Card.Simple>
+                        </Container.Column>
 
-                                    <div className="row">
+                        <Container.Column className="col-12 col-sm-6 col-md-4 mb-3">
+                            <Card.Simple>
+                                <Card.Body className="text-center py-4">
+                                    <p className="font-17 mb-0">{data.pendingImages || 0}</p>
+                                    <p className="font-17 fw-bolder mb-0">Pending</p>
+                                </Card.Body>
+                            </Card.Simple>
+                        </Container.Column>
 
-                                        {/* Total Sale */}
-                                        <div className="col-6 col-md-3 col-lg-6 col-xl-3 mb-5 mb-xl-0">
-                                            <div className="d-flex">
-                                                <div className="icon-container flex-center flex-coulmn">
-                                                    <ShoppingBag size={20} color="#063cdd" />
-                                                </div>
-                                                <div className="ps-2">
-                                                    <p className="text-muted mb-1">Total Sale</p>
-                                                    <h6 className="mb-0">Tk. 43,567.53</h6>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <Container.Column className="col-12 col-sm-6 col-md-4 mb-3">
+                            <Card.Simple>
+                                <Card.Body className="text-center py-4">
+                                    <p className="font-17 mb-0">{data.approvedImages || 0}</p>
+                                    <p className="font-17 fw-bolder mb-0">Approved</p>
+                                </Card.Body>
+                            </Card.Simple>
+                        </Container.Column>
 
-                                        {/* Net Profit */}
-                                        <div className="col-6 col-md-3 col-lg-6 col-xl-3 mb-5 mb-xl-0">
-                                            <div className="d-flex">
-                                                <div className="icon-container flex-center flex-coulmn">
-                                                    <DollarSign size={20} color="#063cdd" />
-                                                </div>
-                                                <div className="ps-2">
-                                                    <p className="text-muted mb-1">Net Profit</p>
-                                                    <h6 className="mb-0">Tk. 43,567.53</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Total Order */}
-                                        <div className="col-6 col-md-3 col-lg-6 col-xl-3 mb-5 mb-xl-0">
-                                            <div className="d-flex">
-                                                <div className="icon-container flex-center flex-coulmn">
-                                                    <ShoppingCart size={20} color="#063cdd" />
-                                                </div>
-                                                <div className="ps-2">
-                                                    <p className="text-muted mb-1">Total Order</p>
-                                                    <h6 className="mb-0">43,532</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Customers */}
-                                        <div className="col-6 col-md-3 col-lg-6 col-xl-3 mb-5 mb-xl-0">
-                                            <div className="d-flex">
-                                                <div className="icon-container flex-center flex-coulmn">
-                                                    <Users size={20} color="#063cdd" />
-                                                </div>
-                                                <div className="ps-2">
-                                                    <p className="text-muted mb-1">Customers</p>
-                                                    <h6 className="mb-0">43,567</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <Container.Column className="col-12 col-sm-6 col-md-4 mb-3">
+                            <Card.Simple>
+                                <Card.Body className="text-center py-4">
+                                    <p className="font-17 mb-0">{data.category || 0}</p>
+                                    <p className="font-17 fw-bolder mb-0">Category</p>
+                                </Card.Body>
+                            </Card.Simple>
+                        </Container.Column>
+                    </Container.Row>
                 </div>
             </Main>
         </div>
