@@ -1,17 +1,17 @@
 #### Header required values 
 ```yaml
 {
-  id: Mongoose ObjectId,
-  iat: JWT iat
+    id: Mongoose ObjectId,
+    iat: JWT iat
 }
 ```
 
 #### User information service will returne 
 ```yaml
 {
-  fullName: String,
-  email: String,
-photo: String (Image URL)
+    fullName: String,
+    email: String,
+    photo: String (Image URL)
 }
 ```
 
