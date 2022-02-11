@@ -1,3 +1,22 @@
+#### Header required values 
+```yaml
+{
+  id: Mongoose ObjectId,
+  iat: JWT iat
+}
+```
+
+#### User information service will returne 
+```yaml
+{
+  fullName: String,
+  email: String,
+photo: String (Image URL)
+}
+```
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
