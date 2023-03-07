@@ -12,7 +12,6 @@
     "comma-number": "^2.1.0",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
-    "node-sass": "^4.14.1",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",

@@ -1,0 +1,102 @@
+.btn {
+	padding: 6px 10px;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	transition: 0.2s all !important;
+}
+
+.btn-gray {
+	color: #6c757d !important;
+	background: #f8f9fa !important;
+}
+
+.btn-gray:hover {
+	color: #212529 !important;
+	background: #e9ecef !important;
+}
+
+.btn-custom-primary {
+	color: #fff !important;
+	background: #042893 !important;
+	min-height: 42px !important;
+}
+
+.btn-custom-primary:hover {
+	color: #fff !important;
+	background: #063cdd !important;
+}
+
+.btn-custom-primary-outline {
+	min-height: 42px !important;
+	color: #042893 !important;
+	background: #fff !important;
+	border: 1px solid #042893 !important;
+}
+
+.btn-custom-primary-outline:hover {
+	color: #fff !important;
+	background: #063cdd !important;
+}
+
+.btn-custom-primary-outline-badge {
+	min-height: 42px !important;
+	color: #042893 !important;
+	background: #fff !important;
+	border: 1px solid #042893 !important;
+	position: relative;
+}
+
+.btn-custom-primary-outline-badge .badge-container {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 25px;
+	height: 25px;
+	font-size: 13px !important;
+	border-radius: 50% !important;
+	color: #fff !important;
+	background: #f10075 !important;
+}
+
+.btn-custom-primary-outline-badge:hover {
+	color: #fff !important;
+	background: #063cdd !important;
+}
+
+.btn-custom-notification {
+	color: #000;
+	background: none !important;
+	position: relative;
+}
+
+.btn-custom-notification .badge-container {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 15px;
+	height: 15px;
+	font-size: 11px !important;
+	border-radius: 50% !important;
+	color: #fff !important;
+	background: #f10075 !important;
+}
+
+.btn-custom-success {
+	color: #198754 !important;
+	background: #198754 17 !important;
+}
+
+.btn-custom-success:hover {
+	color: #198754 !important;
+	background: #198754 44 !important;
+}
+
+.btn-custom-danger {
+	color: #dc3546 a4 !important;
+	background: #dc3546 10 !important;
+}
+
+.btn-custom-danger:hover {
+	color: #dc3545 !important;
+	background: #dc3546 3a !important;
+}

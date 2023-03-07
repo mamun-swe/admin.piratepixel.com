@@ -1,0 +1,11 @@
+.profile-container .img-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.profile-container .img-container img {
+    min-width: 100px;
+    min-height: 100px;
+}

@@ -1,0 +1,90 @@
+@import "../../App.css";
+
+.auth {
+    width: 100vw;
+    height: 100vh;
+}
+
+.auth .image-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.auth .image-container img {
+    width: 50px;
+}
+
+.auth .image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.863);
+}
+
+.auth .image-container .overlay img {
+    width: 50px;
+}
+
+.auth .image-container .overlay h2 {
+    margin-top: 20px;
+    font-weight: 900;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.auth .image-container .overlay p {
+    font-size: 14px;
+    color: #063cdd;
+    margin-bottom: 50px;
+}
+
+.auth .credential-container .card {
+    width: 100%;
+    background: none;
+}
+
+.auth .credential-container .card img {
+    width: 50px;
+}
+
+.auth .credential-container .card h3 {
+    font-weight: 700;
+    color: #042893;
+    font-family: "Roboto", sans-serif;
+}
+
+.auth .credential-container .card p {
+    font-size: 13px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    font-family: "Roboto", sans-serif;
+}
+
+.auth .credential-container .card a {
+    color: #063cdd;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s all;
+    font-family: "Roboto", sans-serif;
+}
+
+.auth .credential-container .card a:hover {
+    color: #042893;
+}
+
+@media (min-width: 576px) {
+    .auth .credential-container .card {
+        width: 360px;
+    }
+}
+
+@media (max-width: 992px) {
+    .auth .credential-container {
+        width: 100%;
+        height: 100vh;
+    }
+}

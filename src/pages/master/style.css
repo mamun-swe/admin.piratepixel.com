@@ -1,0 +1,14 @@
+.master {
+    min-height: 100vh;
+}
+
+.master .main {
+    padding-top: 50px;
+}
+
+@media (min-width: 992px) {
+    .master .main {
+        padding-bottom: 20px;
+        padding-left: 280px;
+    }
+}

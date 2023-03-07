@@ -1,0 +1,98 @@
+.single-menu {
+	width: 100%;
+}
+
+.single-menu .btn {
+	width: 100%;
+	display: block;
+	color: #6c757d;
+	text-align: left;
+}
+
+.single-menu .btn .menu-icon {
+	font-size: 20px;
+	color: #6c757d;
+}
+
+.single-menu .btn .menu-title {
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 10px;
+}
+
+.single-menu .isActive {
+	color: #000 !important;
+}
+
+.sub-menu-container {
+	overflow: hidden;
+}
+
+.sub-menu-container .menu-icon {
+	font-size: 20px;
+	color: #6c757d;
+}
+
+.sub-menu-container .menu-title {
+	color: #6c757d;
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.sub-menu-container .btn {
+	width: 100%;
+	display: block;
+	color: #6c757d;
+	text-align: left;
+}
+
+.sub-menu-container .isActive .menu-icon {
+	color: #063cdd !important;
+}
+
+.sub-menu-container .isActive .menu-title {
+	color: #063cdd !important;
+}
+
+.sub-menu-container .sub-menu {
+	width: 100%;
+	cursor: pointer;
+	padding: 6px 12px;
+	text-align: left;
+}
+
+.sub-menu-container .sub-menu .menu-arrow {
+	margin-top: 2px;
+}
+
+.sub-menu-container .sub-menu .menu-arrow .arrow {
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+.sub-menu-container .sub-menu .menu-arrow .down {
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.sub-menu-container .sub-menu-body {
+	opacity: 0;
+	display: none;
+	overflow: hidden;
+	margin-left: 20px;
+	-webkit-transition: all 0.3s ease 0.15s;
+	-moz-transition: all 0.3s ease 0.15s;
+	-o-transition: all 0.3s ease 0.15s;
+	-ms-transition: all 0.3s ease 0.15s;
+	transition: all 0.3s ease 0.15s;
+}
+
+.sub-menu-container .show {
+	opacity: 1;
+	display: block;
+}

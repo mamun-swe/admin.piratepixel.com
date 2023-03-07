@@ -1,0 +1,23 @@
+@import "../../App.css";
+
+.page-layout {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.page-layout .page-header p {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.page-layout .page-header p span {
+    color: #063cdd;
+}
+
+.page-layout .page-header h5 {
+    font-weight: 400;
+    margin-bottom: 0;
+}
